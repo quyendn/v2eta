@@ -9,13 +9,7 @@ import gzip
 from models import vidsrctoget,vidsrcmeget,vidsrctogetfutoken,info,fetch,fetchserver,fetchsource,fetchstreaming,fetchripstreaming,fetchwatchseriesx
 from io import BytesIO
 from fastapi.responses import StreamingResponse
-from pydantic import BaseModel
 app = FastAPI()
-
-class DataModal(BaseModel):
-    url: str
-    imdb_id : str
-
 
 @app.get('/')
 async def index():
